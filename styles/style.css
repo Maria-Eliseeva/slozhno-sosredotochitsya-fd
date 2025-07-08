@@ -329,7 +329,6 @@
 
   .card-tape {
     grid-row: span 2;
-    grid-row-start: 2;
     height: 100%;
   }
 
