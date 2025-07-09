@@ -183,7 +183,7 @@
   margin-bottom: 10px;
 }
 
-.main__how-concentrate .title-decor:first-of-type {
+.main__how-concentrate .title-decor:not(.title-reg-weight):first-of-type {
   margin-bottom: 20px;
 }
 
