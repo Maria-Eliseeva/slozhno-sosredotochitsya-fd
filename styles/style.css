@@ -1,7 +1,5 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  background-color: var(--title-color);
+  background-color: var(--background-color);
   background-image: var(--background-page);
   background-repeat: no-repeat;
   background-position: center;
@@ -34,8 +32,8 @@
 
 .header__theme-menu-item {
   height: 26px;
-  color: var(--accent-color);
-  font-family: "IBM Plex Mono", sans-serif;
+  color: var(--decor-color);
+  font-family: var(--main-font-family);
   font-weight: var(--font-weight-page-text);
   font-size: var(--font-size-page-text);
   font-style: normal;
@@ -119,20 +117,24 @@
   content: "";
   position: absolute;
   top: var(--padding-page);
-  left: calc(max(var(--min-width), 100%) - var(--padding-page) - var(--corner-size));
+  left: calc(
+    max(var(--min-width), 100%) - var(--padding-page) - var(--corner-size)
+  );
   display: inline-block;
   box-sizing: border-box;
   width: var(--corner-size);
   height: var(--corner-size);
   border-width: 1px 1px 0px 0px;
   border-style: solid;
-  border-color: var(--accent-color);
+  border-color: var(--decor-color);
 }
 
 .decorated-zone::before {
   content: "";
   position: absolute;
-  top: calc(max(var(--min-height), 100vh) - var(--padding-page) - var(--corner-size));
+  top: calc(
+    max(var(--min-height), 100vh) - var(--padding-page) - var(--corner-size)
+  );
   left: var(--padding-page);
   display: inline-block;
   box-sizing: border-box;
@@ -140,7 +142,7 @@
   height: var(--corner-size);
   border-width: 0px 0px 1px 1px;
   border-style: solid;
-  border-color: var(--accent-color);
+  border-color: var(--decor-color);
 }
 
 .main-section {
@@ -168,7 +170,7 @@
 
 .main-section__title {
   padding-right: 7px;
-  color: var(--accent-color);
+  color: var(--decor-color);
   font-family: var(--main-font-family);
   font-weight: var(--font-weight-page-title);
   font-size: var(--font-size-page-text);
@@ -297,8 +299,7 @@
 
   .main-section {
     grid-template-columns: 1fr 2fr;
-    padding-inline-start: calc(15px + var(--padding-page));
-    padding-inline-end: calc(-15px + var(--padding-page));
+    padding-inline: var(--padding-page);
   }
 
   .container {
@@ -316,23 +317,23 @@
     margin-bottom: 20px;
   }
 
-  .card-sunset {
+  .main__in-photos__card:first-child {
     grid-column: span 2;
     grid-row: 1;
   }
 
-  .card-ice-cream {
+  .main__in-photos__card:nth-child(2) {
     grid-row-start: 1;
     grid-row-end: 3;
     height: 100%;
   }
 
-  .card-tape {
+  .main__in-photos__card:nth-child(3) {
     grid-row: span 2;
     height: 100%;
   }
 
-  .card-street {
+  .main__in-photos__card:nth-child(5) {
     grid-column: span 2;
   }
 
@@ -354,10 +355,6 @@
   .header__text {
     --header-text-width: clamp(22.75rem, -1.187rem + 49.804vw, 30.688rem);
     justify-self: self-end;
-  }
-
-  .main-section {
-    padding-inline: var(--padding-page);
   }
 
   .container {

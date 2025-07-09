@@ -1,6 +1,8 @@
 :root.theme-dark {
   --background-page: url(../images/cover-image-dark.png);
   --accent-color: #ff0070;
+  --decor-color: #ff0070;
+  --background-color: #000028;
   --title-color: #000028;
   --slogan-color: #db00ff;
   --accent-color-hover: rgba(255, 0, 112, 0.4);
